@@ -1,45 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <!-- Fonteawesome -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  Bill
+    <link rel="stylesheet" href="style.css" />
 
-  Select Tip %
-  5%
-  10%
-  550%
-  15%
-  25%
-  50%
-  Custom
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="splitter__title">
+      <p>SPLI</p>
+      <p>TTER</p>
+    </div>
 
-  Number of People
+    <div class="calculator__block">
+      <!-- Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
+      person Total / person Reset -->
+      <div class="operations__block">
+        <div class="bill__space">
+          <label for="bill" class="bill__label">Bill</label>
+          <i class="fa-solid fa-dollar-sign dollar__sign"></i>
+          <input
+            type="text"
+            id="bill"
+            class="bill__input"
+            name="bill"
+            required
+            minlength="1"
+            maxlength="8"
+            size="10"
+            placeholder="0"
+          />
+        </div>
 
-  Tip Amount
-  / person
+        <div class="tips__values">
+          <p class="tips__text">Select Tip %</p>
+          <div class="values__ranges">
+            <div class="first__range">
+              <button>5%</button>
+              <button>10%</button>
+              <button>15%</button>
+            </div>
+            <div class="second__range">
+              <button>25%</button>
+              <button>50%</button>
+              <input
+                type="text"
+                id="people"
+                name="people"
+                required
+                minlength="1"
+                maxlength="3"
+                size="10"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="space__people">
+          <div class="people__textes">
+            <label for="people" class="people__label">Number of people</label>
+            <p class="error__people">Cant'be zero</p>
+          </div>
+          <i class="fa-solid fa-user user__face"></i>
+          <input
+            type="text"
+            id="people"
+            class="people__input"
+            name="people"
+            required
+            minlength="1"
+            maxlength="8"
+            size="40"
+            placeholder="0"
+          />
+        </div>
+      </div>
+      <div class="totals_calculation">
+        <div class="amount__block">
+          <div class="amount__text">
+            <p class="tip__amount">Tip Amount</p>
+            <p class="tip__person">/ person</p>
+          </div>
+          <div class="amount__numbers">
+            <p class="dollar__symbol">$</p>
+            <p class="person__tip">0.00</p>
+          </div>
+        </div>
+        <div class="total__block">
+          <div class="total__text">
+            <p class="total__amount">Total</p>
+            <p class="total__person">/ person</p>
+          </div>
+          <div class="total__numbers">
+            <p class="dollar__symbol">$</p>
+            <p class="total__money">0.00</p>
+          </div>
+        </div>
+        <button class="button__reset">Reset</button>
+      </div>
+    </div>
 
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">
+      <!-- Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>. -->
+    </div>
+  </body>
 </html>

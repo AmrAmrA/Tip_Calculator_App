@@ -1,0 +1,245 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c5e4e7;
+  font-family: "Space Mono", sans-serif;
+}
+
+.splitter__title {
+  text-align: center;
+  margin-top: 100px;
+}
+.splitter__title p {
+  color: #00474a;
+  letter-spacing: 13px;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.calculator__block {
+  background-color: hsl(0, 0%, 100%);
+  width: 900px;
+  height: 500px;
+  border-radius: 25px;
+  display: flex;
+  margin: 60px auto 0px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.operations__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 500px;
+  padding: 30px;
+}
+.bill__space,
+.space__people {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.bill__label {
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 900;
+  color: #396e5d;
+}
+
+.bill__input {
+  width: 390px;
+  height: 40px;
+  font-size: 25px;
+  background-color: #f2f9fb;
+  color: #577370;
+  border: none;
+  outline: none;
+  text-align: right;
+  padding: 0 5px;
+}
+
+.bill__input::placeholder {
+  color: #729590;
+  display: flex;
+  justify-items: center;
+  font-size: 25px;
+}
+
+.bill__input:hover { 
+  border: 2px solid  hsl(172, 67%, 45%);
+}
+
+
+.dollar__sign {
+  position: absolute;
+  top: 47px;
+  left: 10px;
+  color: #729590;
+}
+
+.tips__text {
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 900;
+  color: #396e5d;
+}
+
+.values__ranges {
+  display: flex;
+  flex-direction: column;
+}
+
+.values__ranges button {
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 900;
+  text-align: center;
+  outline: none;
+  border: none;
+  color: #f2f9fb;
+  background-color: #074347;
+  margin: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.values__ranges button:hover {
+  background-color: #9fe9e0;
+  color: #00474a;
+}
+
+.values__ranges input {
+  width: 120px;
+  height: 40px;
+  margin: 3px;
+  border-radius: 3px;
+  font-size: 15px;
+  text-align: center;
+  border: none;
+  outline: none;
+  background-color: #f3fcfc;
+  color: #28726b;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: right;
+  padding: 0px 10px;
+}
+
+.values__ranges input::placeholder { 
+  text-align: center;
+}
+
+.values__ranges input:hover { 
+  border: 2px solid  hsl(172, 67%, 45%);
+
+}
+
+
+.people__input {
+  width: 390px;
+  height: 40px;
+  font-size: 25px;
+  background-color: #f2f9fb;
+  color: #577370;
+  border: none;
+  outline: none;
+  text-align: right;
+  padding: 0 5px;
+}
+
+.people__input:hover { 
+  border: 2px solid red;
+}
+
+
+.user__face {
+  position: absolute;
+  top: 36px;
+  left: 10px;
+  color: #729590;
+}
+.people__textes {
+  display: flex;
+  justify-content: space-between;
+  width: 390px;
+  padding: 0px 3px 5px 3px;
+}
+
+.people__label,
+.error__people {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.people__label {
+  color: #396e5d;
+}
+.error__people {
+  color: red;
+}
+
+.totals_calculation {
+  background-color: #00474a;
+  margin: 40px 20px;
+  border-radius: 15px;
+  width: 400px;
+  height: 420px;
+}
+.amount__block,
+.total__block {
+  margin: 50px 35px 20px 35px;
+  display: flex;
+  justify-content: space-between;
+}
+.amount__numbers,
+.total__numbers {
+  display: flex;
+  color: #9fe8e0;
+}
+.amount__numbers p,
+.total__numbers p {
+  font-weight: 900; 
+  font-size: 35px;
+  margin-top: -5px;
+}
+
+.tip__amount, 
+.total__amount {
+  color: white;
+  font-weight: 900;
+}
+.total__person, .tip__person {
+  color: #396e5d;
+  font-weight: 900;
+}
+
+.button__reset {
+  width: 320px;
+  height: 50px;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin: 120px auto 0px auto;
+  background-color: hsl(173, 65%, 28%);
+  color: hsl(184, 14%, 56%);
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button__reset:hover {
+  background-color: #9fe8e0;
+  color: #28726b;
+}
