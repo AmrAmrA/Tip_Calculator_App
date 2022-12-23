@@ -73,10 +73,9 @@ body {
   font-size: 25px;
 }
 
-.bill__input:hover { 
-  border: 2px solid  hsl(172, 67%, 45%);
+.bill__input:hover {
+  border: 2px solid hsl(172, 67%, 45%);
 }
-
 
 .dollar__sign {
   position: absolute;
@@ -133,17 +132,16 @@ body {
   letter-spacing: 0.5px;
   text-align: right;
   padding: 0px 10px;
+  cursor: pointer;
 }
 
-.values__ranges input::placeholder { 
+.values__ranges input::placeholder {
   text-align: center;
 }
 
-.values__ranges input:hover { 
-  border: 2px solid  hsl(172, 67%, 45%);
-
+.values__ranges input:hover {
+  border: 2px solid hsl(172, 67%, 45%);
 }
-
 
 .people__input {
   width: 390px;
@@ -157,10 +155,9 @@ body {
   padding: 0 5px;
 }
 
-.people__input:hover { 
+.people__input:hover {
   border: 2px solid red;
 }
-
 
 .user__face {
   position: absolute;
@@ -208,17 +205,18 @@ body {
 }
 .amount__numbers p,
 .total__numbers p {
-  font-weight: 900; 
+  font-weight: 900;
   font-size: 35px;
   margin-top: -5px;
 }
 
-.tip__amount, 
+.tip__amount,
 .total__amount {
   color: white;
   font-weight: 900;
 }
-.total__person, .tip__person {
+.total__person,
+.tip__person {
   color: #396e5d;
   font-weight: 900;
 }
@@ -242,4 +240,101 @@ body {
 .button__reset:hover {
   background-color: #9fe8e0;
   color: #28726b;
+}
+
+/* Responsive part  */
+
+@media screen and (max-width: 950px) {
+  .calculator__block {
+    width: 600px;
+  }
+
+  .totals_calculation,
+  .operations__block {
+    width: 300px;
+  }
+
+  .totals_calculation {
+    margin: 40px 10px;
+  }
+  .operations__block {
+    padding: 30px 10px;
+  }
+
+  .bill__input,
+  .people__input,
+  .people__textes {
+    width: 250px;
+  }
+  .values__ranges {
+    flex-direction: row;
+  }
+  .values__ranges button,
+  .values__ranges input {
+    width: 100px;
+  }
+
+  .values__ranges input {
+    padding: 0px 10px;
+    letter-spacing: 0.3px;
+    font-size: 16px;
+  }
+  .amount__block,
+  .total__block {
+    flex-direction: column;
+    margin: 21px 0px 60px 20px;
+  }
+
+  .amount__numbers p,
+  .total__numbers p {
+    font-weight: 900;
+    font-size: 25px;
+    margin-top: 0px;
+  }
+
+  .button__reset {
+    width: 230px;
+    height: 40px;
+    font-size: 16px;
+    margin: 100px auto 0px auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .calculator__block {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+  }
+  .operations__block {
+    width: 90%;
+  }
+  .totals_calculation {
+    height: 360px;
+    width: 90%;
+  }
+  .total__block {
+    margin: 21px 0px 30px 20px;
+  }
+  .bill__input, .people__input, .people__textes {
+    width: 95%;
+  }
+  .tips__values {
+    width: 100%;
+  }
+  .values__ranges {
+    margin-bottom: 30px;
+    flex-direction: row;
+  }
+  .values__ranges button, 
+  .values__ranges input {
+    width: 38vw;
+  }
+  .button__reset {
+    margin: 0px auto;
+    width: 90%;
+    height: 50px;
+    font-size: 22px;
+  }
 }
