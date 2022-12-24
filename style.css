@@ -155,7 +155,7 @@ body {
   padding: 0 5px;
 }
 
-.people__input:hover {
+.emptyInput {
   border: 2px solid red;
 }
 
@@ -183,6 +183,11 @@ body {
 }
 .error__people {
   color: red;
+  display: none;
+}
+
+.show__message {
+  display: block;
 }
 
 .totals_calculation {
@@ -317,7 +322,9 @@ body {
   .total__block {
     margin: 21px 0px 30px 20px;
   }
-  .bill__input, .people__input, .people__textes {
+  .bill__input,
+  .people__input,
+  .people__textes {
     width: 95%;
   }
   .tips__values {
@@ -327,7 +334,7 @@ body {
     margin-bottom: 30px;
     flex-direction: row;
   }
-  .values__ranges button, 
+  .values__ranges button,
   .values__ranges input {
     width: 38vw;
   }
