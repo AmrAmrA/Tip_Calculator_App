@@ -3,9 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <!-- Fonteawesome -->
     <link
       rel="icon"
       type="image/png"
@@ -38,8 +35,6 @@
     </div>
 
     <div class="calculator__block">
-      <!-- Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-      person Total / person Reset -->
       <div class="operations__block">
         <div class="bill__space">
           <label for="bill" class="bill__label">Bill</label>
@@ -61,16 +56,18 @@
           <p class="tips__text">Select Tip %</p>
           <div class="values__ranges">
             <div class="first__range">
-              <button>5%</button>
-              <button>10%</button>
-              <button>15%</button>
+              <button class="tipsValues">5%</button>
+              <button class="tipsValues">10%</button>
+              <button class="tipsValues">15%</button>
             </div>
             <div class="second__range">
-              <button>25%</button>
-              <button>50%</button>
+              <button class="tipsValues">25%</button>
+              <button class="tipsValues">50%</button>
               <input
                 type="text"
-                id="people"
+                id="customValue"
+                class="tipsValues"
+                value="0"
                 name="people"
                 required
                 minlength="1"
@@ -126,10 +123,18 @@
     </div>
 
     <div class="attribution">
-      <!-- Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>. -->
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >.
+      </p>
+      <p>
+        Coded by
+        <a href="https://github.com/AmrAmrA?tab=repositories"
+          >Abd El Fattah Amr</a
+        >.
+      </p>
     </div>
   </body>
   <script src="app.js"></script>

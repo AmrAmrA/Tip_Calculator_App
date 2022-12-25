@@ -1,9 +1,14 @@
+/* A little reset  */
 *,
 ::after,
 ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+}
+a {
+  color: black;
 }
 
 body {
@@ -11,6 +16,7 @@ body {
   font-family: "Space Mono", sans-serif;
 }
 
+/* We center the Splitter title  */
 .splitter__title {
   text-align: center;
   margin-top: 100px;
@@ -21,7 +27,7 @@ body {
   font-weight: 900;
   font-size: 22px;
 }
-
+/* Design for the white block which contains the totals part and the calculator part  */
 .calculator__block {
   background-color: hsl(0, 0%, 100%);
   width: 900px;
@@ -33,6 +39,7 @@ body {
   justify-content: space-between;
 }
 
+/* Design for the calculator part (the part white a white background) */
 .operations__block {
   display: flex;
   flex-direction: column;
@@ -189,7 +196,7 @@ body {
 .show__message {
   display: block;
 }
-
+/* Design for the totals part (the part white a cyan background) */
 .totals_calculation {
   display: flex;
   flex-direction: column;
@@ -248,6 +255,13 @@ body {
 .button__reset:hover {
   background-color: #9fe8e0;
   color: #28726b;
+}
+
+.attribution {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10% auto;
 }
 
 /* Responsive part  */
