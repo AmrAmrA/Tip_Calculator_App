@@ -6,6 +6,8 @@ billInput.addEventListener("input", onlyNumbers);
 numberOfPersonInput.addEventListener("input", onlyNumbers);
 
 function onlyNumbers() {
+  tipsPercentages();
+
   billInput.value = billInput.value
     .replace(/[^0-9.]/g, "")
     .replace(/(\..*)\./g, "$1");
@@ -35,30 +37,29 @@ function tipsPercentages() {
       tipsButtons[i].firstChild.nodeValue.replace("%", "")
     );
     tipsButtons[i].value = removePercentage;
-    tipsButtons[i].addEventListener("click", () => {
+    tipsButtons[i].addEventListener("click", startOperations);
+    billInput.addEventListener("input", startOperations);
+    numberOfPersonInput.addEventListener("input", startOperations);
+    function startOperations() {
       let newValue = (parseInt(tipsButtons[i].value) * billInput.value) / 100;
       let totalValue = newValue + parseInt(billInput.value);
       let tipForPerson = newValue / parseInt(numberOfPersonInput.value);
       let totalForPerson = parseFloat(totalValue / numberOfPersonInput.value);
-      console.log(typeof newValue);
-      console.log(typeof totalValue);
-      console.log(typeof tipForPerson);
-      console.log(typeof people);
-      console.log(newValue);
-      console.log(totalValue);
-      console.log(tipForPerson);
-      console.log(totalForPerson);
 
-      personnalTipContent.textContent = tipForPerson.toFixed(2);
-      personnalTotalContent.textContent = totalForPerson.toFixed(2);
-    });
+      personnalTipContent.innerHTML = tipForPerson.toFixed(2);
+      personnalTotalContent.innerHTML = totalForPerson.toFixed(2);
+
+      if (isNaN(tipForPerson) || tipForPerson === Infinity) {
+        personnalTipContent.textContent = "0.00";
+      }
+      if (isNaN(totalForPerson) || totalForPerson === Infinity) {
+        personnalTotalContent.textContent = "0.00";
+      }
+    }
   }
 }
 
-tipsPercentages();
-
 let resetButton = document.querySelector(".button__reset");
-
 resetButton.addEventListener("click", resetValues);
 
 function resetValues() {

@@ -191,6 +191,9 @@ body {
 }
 
 .totals_calculation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   background-color: #00474a;
   margin: 40px 20px;
   border-radius: 15px;
@@ -199,9 +202,10 @@ body {
 }
 .amount__block,
 .total__block {
-  margin: 50px 35px 20px 35px;
+  margin: 30px 35px 10px 35px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .amount__numbers,
 .total__numbers {
@@ -232,8 +236,7 @@ body {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  display: block;
-  margin: 120px auto 0px auto;
+  margin: 0px auto;
   background-color: hsl(173, 65%, 28%);
   color: hsl(184, 14%, 56%);
   font-weight: 700;
@@ -261,6 +264,7 @@ body {
 
   .totals_calculation {
     margin: 40px 10px;
+    justify-content: space-evenly;
   }
   .operations__block {
     padding: 30px 10px;
@@ -287,7 +291,7 @@ body {
   .amount__block,
   .total__block {
     flex-direction: column;
-    margin: 21px 0px 60px 20px;
+    margin: 21px 0px 0px 20px;
   }
 
   .amount__numbers p,
@@ -301,7 +305,7 @@ body {
     width: 230px;
     height: 40px;
     font-size: 16px;
-    margin: 100px auto 0px auto;
+    margin: 0px auto;
   }
 }
 
